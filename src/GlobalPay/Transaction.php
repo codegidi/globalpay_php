@@ -11,7 +11,7 @@ class GlobalPay_Transaction {
         $this->isLive = $isLive;
     }
 
-    public function initiation($merchantid,$returnurl,$merchantreference,$description,$totalamount,$currencycode,$customerEmail,$customerNumber,$customerFirstName,$customerLastName){
+    public function initiation($returnurl,$merchantreference,$merchantid,$description,$totalamount,$currencycode,$customerEmail,$customerNumber,$customerFirstName,$customerLastName){
 
         $customer = array('email'=> $customerEmail,
             'firstname'=> $customerFirstName,

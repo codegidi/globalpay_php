@@ -35,7 +35,7 @@ composer require codegidi/globalpay
     use GlobalPay\Transaction;
 
 	$transactionInit = new GlobalPay_Transaction({Access_token},{optional BOOL isLive : #true for for live enviroment and false for staging default value false});
-	$transactionResponse = $transactionInit->initiation({merchant id},{return url},{merchant reference},{description},{total amount in minor},{currency code i.e NGN for naira},{customer email},{customer number},{customer firstname},{customer lastname});
+	$transactionResponse = $transactionInit->initiation({{return url},{merchant reference},merchant id},{description},{total amount in minor},{currency code i.e NGN for naira},{customer email},{customer number},{customer firstname},{customer lastname});
 
 	if(!isset($transactionResponse['error'])){
 		header("location:" . $transactionResponse['redirectUri '])
