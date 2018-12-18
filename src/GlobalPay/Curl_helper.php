@@ -3,10 +3,11 @@ namespace GlobalPay;
 
 class Curl_helper {
 
-    private $BASE_URL_STAGING = "http://globalpay.azurewebsites.net";
-    private $AUTH_URL_STAGING = "http://globalpayauthserver.azurewebsites.net/connect/token";
-    private $BASE_URL_LIVE = "http://globalpay.azurewebsites.net";
-    private $AUTH_URL_LIVE = "http://globalpayauthserver.azurewebsites.net/connect/token'";
+    private $BASE_URL_STAGING = "https://gpaygatewayapi.azurewebsites.net/v2/PaymentGateway/PaymentGatewayCapture";
+    private $AUTH_URL_STAGING = "https://gpayauthorisation.azurewebsites.net/";
+    private $BASE_URL_LIVE = "https://api.globalpay.com.ng/v2/PaymentGateway/PaymentGatewayCapture";
+    private $AUTH_URL_LIVE = "https://auth.globalpay.com.ng";
+	
 
     public function post($endPoint,$body,$accessKey,$isLive){
         $ch = curl_init();
